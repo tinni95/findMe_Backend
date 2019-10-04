@@ -1,0 +1,30 @@
+type User{
+  id: ID! @unique
+  name: String!
+  email: String!
+  password: String!
+}
+
+type Post {
+  id: ID! @unique
+  title: String!
+  content: String!
+  field: String!
+  published: Boolean! @default(value: "false")
+  author: User!
+}
+
+type Position {
+  id: ID! @unique
+  title: String!
+  description: String!
+  field: String!
+  post: Post!
+}
+
+type Application {
+   id: ID! @unique
+   position: Position!
+   user: User!
+   Status: String!
+}
