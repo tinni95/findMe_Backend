@@ -72,6 +72,8 @@ const resolvers = {
         {
           data: {
             name: args.name,
+            email: args.email,
+            password: args.password,
           },
         },
         info,
